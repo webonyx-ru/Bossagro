@@ -1,0 +1,52 @@
+.header
+	width: 100%
+
+.header__top
+	background: url("../images/header-bg.jpg") no-repeat top
+	height: 240px
+	padding: 14px 0
+	
+.header-logo-wrapper
+	display: inline-block
+	line-height: 0
+
+.logo-image
+	width: 100%
+	height: 100%
+
+.header__bottom
+	height: 45px
+	background-color: #81c21e
+	display: flex
+	align-items: center
+
+.header-menu-wrapper
+	display: inline-block
+
+.main-menu
+	display: flex
+	list-style-type: none
+
+.main-menu__item
+	font-weight: 500
+	text-transform: uppercase
+	margin-right: 53px
+	font-size: 14px
+	&:last-child
+		margin-right: 0
+
+.main-menu__item-link
+	position: relative
+	color: #ffffff
+	transition: all 0.3s ease
+	&::after
+		position: relative
+		display: block
+		content: ''
+		border-bottom: 1px solid #ffffff
+		width: 0
+		transition: all 0.3s ease
+		margin: auto
+	&:hover
+		&::after
+			width: 105%

@@ -2,12 +2,276 @@
 
 {% block pageTitle %}Главная страница{% endblock %}
 
-<style>
-    .hello {
-        border: 2px solid #ffaaaa;
-    }
-</style>
-
 {% block content %}
-    <div class="logo"><i class="fri fri-qube-logo"></i></div>
+
+<div class="main-page">
+    <div class="container">
+        <div class="d-flex">
+            <div class="news mr45">
+                <div class="d-block text-center mb23">
+                    <span class="fz35 text-dark text-bold letter-spacing-2_5">Новости</span>
+                </div>
+                <div class="news-grid">
+                    <div class="news-grid__item news-item">
+                        <div class="news-item__image-wrapper mb20">
+                            <img class="news-item__image" src="images/news-image-1.jpg">
+                        </div>
+                        <p class="news-item__title">
+                            Новый международный проект стартовал в Алматинской области
+                        </p>
+                        <p class="news-item__text">
+                            В Енбекшиказахском районе Алматинской области стартовал финансируемый ЕС проект «ОДАК — Еннбекшиказахский Альянс для устойчивого экономического и человеческого развития», при участии районного акимата.
+                        </p>
+                        <div class="d-flex justify-space-beetween align-items-center">
+                            <span class="button button_green">Читать далее</span>
+                            <div class="d-flex align-items-center">
+                                <i class="fri fri-date"></i>
+                                <span class="text-gray fz12 mr10">08.06.2017</span>
+                                <i class="fri fri-views"></i>
+                                <span class="text-gray fz12">25</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news-grid__item news-item">
+                        <div class="news-item__image-wrapper mb20">
+                            <img class="news-item__image" src="images/news-image-2.jpg">
+                        </div>
+                        <p class="news-item__title">
+                            Аскар Мырзаметович встретился с послом Чехии
+                        </p>
+                        <p class="news-item__text">
+                            Министр сельского хозяйства Казахстана Аскар Мырзахметович встретился с Чрезвычайным Послом Чешской Республики госпожой Элишкой Жиговой.
+                        </p>
+                        <div class="d-flex justify-space-beetween align-items-center">
+                            <span class="button button_green">Читать далее</span>
+                            <div class="d-flex align-items-center">
+                                <i class="fri fri-date"></i>
+                                <span class="text-gray fz12 mr10">08.06.2017</span>
+                                <i class="fri fri-views"></i>
+                                <span class="text-gray fz12">25</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news-grid__item news-item">
+                        <div class="news-item__image-wrapper mb20">
+                            <img class="news-item__image" src="images/news-image-3.jpg">
+                        </div>
+                        <p class="news-item__title">
+                            Аскар Мырзаметович встретился с послом Чехии
+                        </p>
+                        <p class="news-item__text">
+                            Программа должна выявлять болевые ощущения у четвероногих друзей по мимике на мордах.
+                        </p>
+                        <div class="d-flex justify-space-beetween align-items-center">
+                            <span class="button button_green">Читать далее</span>
+                            <div class="d-flex align-items-center">
+                                <i class="fri fri-date"></i>
+                                <span class="text-gray fz12 mr10">08.06.2017</span>
+                                <i class="fri fri-views"></i>
+                                <span class="text-gray fz12">25</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="news-grid__item news-item">
+                        <div class="news-item__image-wrapper mb20">
+                            <img class="news-item__image" src="images/news-image-4.jpg">
+                        </div>
+                        <p class="news-item__title">
+                            Аграрная кредитная корпорация и Европейский инвестиционный банк обсудили вопросы сотрудничества
+                        </p>
+                        <p class="news-item__text">
+                            Руководство холдинга «КазАгро» и Аграрной кредитной корпорации провело встречу с делегацией Европейского инвестиционного банка (ЕИБ), возглавляемой вице-президентом Вазилом Худаком. Делегация находится в Казахстане в рамках официального визита.
+                        </p>
+                        <div class="d-flex justify-space-beetween align-items-center">
+                            <span class="button button_green">Читать далее</span>
+                            <div class="d-flex align-items-center">
+                                <i class="fri fri-date"></i>
+                                <span class="text-gray fz12 mr10">08.06.2017</span>
+                                <i class="fri fri-views"></i>
+                                <span class="text-gray fz12">25</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="news__all-news">
+                    <a class="news__all-news-link default-link" href="#">Все новости</a>
+                    <div class="news__all-news-line"></div>
+                </p>
+                <div class="d-block text-center mb23">
+                    <span class="fz35 text-dark text-bold letter-spacing-2_5">Статьи</span>
+                </div>
+                <div class="articles d-flex flex-column">
+                    <div class="articles__grid">
+                        <div class="news-item__image-wrapper">
+                            <img class="news-item__image" src="images/news-image-1.jpg">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="news-item__title">
+                                Новый междунродный проект стартовал в Алматиской области
+                            </div>
+                            <div class="news-item__text">
+                                В Енбекшиказахском районе Алматинской области стартовал финансируемый ЕС проект «ОДАК — Еннбекшиказахский Альянс для устойчивого экономического и человеческого развития», при участии районного акимата.
+                            </div>
+                            <div class="d-flex justify-space-beetween align-items-center">
+                                <span class="button button_green">Читать далее</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="fri fri-date"></i>
+                                    <span class="text-gray fz12 mr10">08.06.2017</span>
+                                    <i class="fri fri-views"></i>
+                                    <span class="text-gray fz12">25</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articles__grid">
+                        <div class="news-item__image-wrapper">
+                            <img class="news-item__image" src="images/news-image-2.jpg">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="news-item__title">
+                                Новый междунродный проект стартовал в Алматиской области
+                            </div>
+                            <div class="news-item__text">
+                                В Енбекшиказахском районе Алматинской области стартовал финансируемый ЕС проект «ОДАК — Еннбекшиказахский Альянс для устойчивого экономического и человеческого развития», при участии районного акимата.
+                            </div>
+                            <div class="d-flex justify-space-beetween align-items-center">
+                                <span class="button button_green">Читать далее</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="fri fri-date"></i>
+                                    <span class="text-gray fz12 mr10">08.06.2017</span>
+                                    <i class="fri fri-views"></i>
+                                    <span class="text-gray fz12">25</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articles__grid">
+                        <div class="news-item__image-wrapper">
+                            <img class="news-item__image" src="images/news-image-3.jpg">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="news-item__title">
+                                Новый междунродный проект стартовал в Алматиской области
+                            </div>
+                            <div class="news-item__text">
+                                В Енбекшиказахском районе Алматинской области стартовал финансируемый ЕС проект «ОДАК — Еннбекшиказахский Альянс для устойчивого экономического и человеческого развития», при участии районного акимата.
+                            </div>
+                            <div class="d-flex justify-space-beetween align-items-center">
+                                <span class="button button_green">Читать далее</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="fri fri-date"></i>
+                                    <span class="text-gray fz12 mr10">08.06.2017</span>
+                                    <i class="fri fri-views"></i>
+                                    <span class="text-gray fz12">25</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="articles__grid">
+                        <div class="news-item__image-wrapper">
+                            <img class="news-item__image" src="images/news-image-4.jpg">
+                        </div>
+                        <div class="d-flex flex-column">
+                            <div class="news-item__title">
+                                Новый междунродный проект стартовал в Алматиской области
+                            </div>
+                            <div class="news-item__text">
+                                В Енбекшиказахском районе Алматинской области стартовал финансируемый ЕС проект «ОДАК — Еннбекшиказахский Альянс для устойчивого экономического и человеческого развития», при участии районного акимата.
+                            </div>
+                            <div class="d-flex justify-space-beetween align-items-center">
+                                <span class="button button_green">Читать далее</span>
+                                <div class="d-flex align-items-center">
+                                    <i class="fri fri-date"></i>
+                                    <span class="text-gray fz12 mr10">08.06.2017</span>
+                                    <i class="fri fri-views"></i>
+                                    <span class="text-gray fz12">25</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="news__all-news">
+                    <a class="news__all-news-link default-link" href="#">Все статьи</a>
+                    <div class="news__all-news-line"></div>
+                </p>
+            </div>
+            <div class="sidebar">
+                <div class="journal">
+                    <a class="journal__button button button_green" href="#">Читать журнал</a>
+                </div>
+                <div class="d-flex flex-wrap sidebar-grid-images">
+                    <a class="link-image sidebar-grid-image" href="#">
+                        <img src="images/sidebar-image-1.jpg" alt="">
+                    </a>
+                    <a class="link-image sidebar-grid-image" href="#">
+                        <img src="images/sidebar-image-2.jpg" alt="">
+                    </a>
+                    <a class="link-image sidebar-grid-image" href="#">
+                        <img src="images/sidebar-image-3.jpg" alt="">
+                    </a>
+                    <a class="link-image sidebar-grid-image" href="#">
+                        <img src="images/sidebar-image-4.jpg" alt="">
+                    </a>
+                </div>
+                <div class="sidebar-ban-wrapper">
+                    <img src="images/ban.jpg" alt="" class="sidebar__ban">
+                </div>
+                <div class="sidebar-gismeteo">
+                    <img src="images/gismeteo.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="d-block text-center mb23">
+            <span class="fz35 text-dark text-bold letter-spacing-2_5">Партнеры</span>
+        </div>
+        <div class="partners owl-carousel jq-parnters-slider">
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-1.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-2.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-3.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-4.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-5.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-6.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-7.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-1.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-2.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-3.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-4.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-5.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-6.jpg" alt="">
+            </div>
+            <div class="partners-wrapper">
+                <img class="partners__image" src="images/partner-7.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

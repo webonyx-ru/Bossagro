@@ -1,13 +1,10 @@
-@import "fonts"
 @import "mixins/mixins"
-$framework: mb10
+@import "mixins/retina_sprites"
+$framework: mb8 mb10 mb20 mb23 mb28 mb40 mr10 mr20 mr25 mr45
 +generate-framework($framework)
 
-@import "icons"
-
+@import "header"
+@import "footer"
+@import "framework"
 @import "main"
-
-@import "media-screens/tablet-landscape"
-@import "media-screens/tablet-portatit"
-@import "media-screens/mobile-landscape"
-@import "media-screens/mobile-portatit"
+@import "responsive"
