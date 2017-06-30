@@ -1,0 +1,29 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Статья{% endblock %}
+
+{% block content %}
+
+	<div class="article-page">
+		<div class="container">
+			<ul class="breadcrumbs">
+				<li class="breadcrumbs__item"><a class="link-with-underline link-gray" href="/">Главная</a></li>
+				<li class="breadcrumbs__item"><a class="link-with-underline link-gray" href="#">Статьи</a></li>
+				<li class="breadcrumbs__item"><a class="link-with-underline link-gray" href="#">Новый международный проект стартовал в Алматинской области</a></li>
+			</ul>
+			<div class="d-flex">
+				<div class="page-content">
+					<h3 class="h3-title">Новый международный проект стартовал в Алматинской области</h3>
+					<div class="statistic-and-date">
+						<i class="fri fri-date"></i>
+						<span class="articles-item__date">08.06.2017</span>
+						<i class="fri fri-views"></i>
+						<span class="articles-item__views">25</span>
+					</div>
+					<div class="article"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

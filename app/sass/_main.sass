@@ -27,35 +27,46 @@ a
 .main-page
 	padding: 35px 0 70px
 
-.news
-	width: 805px
+.page-content
+	max-width: 805px
+	width: 100%
 	flex-shrink: 0
 	display: flex
 	flex-direction: column
+	margin-right: 45px
 
-.news-grid
+.h2-title
+	margin-bottom: 30px
+	font-size: 35px
+	color: #343434
+	font-weight: bold
+	text-align: center
+	letter-spacing: 2.5px
+
+.news
 	display: flex
 	flex-wrap: wrap
 	margin-right: -50px
 	margin-bottom: -50px
-	padding-bottom: 6px
+	padding-bottom: 35px
 
-.news-grid__item
-	padding-right: 50px
-	padding-bottom: 50px
+.news-item
 	display: flex
 	flex-shrink: 0
 	flex-direction: column
+	padding-right: 50px
+	padding-bottom: 50px
 	width: 50%
 
-.news-item__image-wrapper
+.news-item__image-wrapper, .articles-item__left-part
 	position: relative
 	width: 377px
 	height: 251px
 	flex-shrink: 0
 	overflow: hidden
+	margin-bottom: 20px
 
-.news-item__image
+.news-item__image, .articles-item__image
 	position: absolute
 	top: 0
 	left: 0
@@ -63,7 +74,7 @@ a
 	width: 100%
 	object-fit: cover
 
-.news-item__title
+.news-item__title, .articles-item__title
 	font-size: 18px
 	font-weight: 500
 	color: #343434
@@ -76,6 +87,22 @@ a
 	color: #343434
 	line-height: 1.9
 	margin-bottom: 17px
+
+.news-item__bottom
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+.news-item__date, .news-item__views, .articles-item__date, .articles-item__views
+	color: #b8b8b8
+	font-size: 12px
+
+.news-item__date, .articles-item__date
+	margin-right: 10px
+
+.statistic-and-date
+	display: flex
+	align-items: center
 
 .button
 	display: flex
@@ -105,44 +132,34 @@ a
 	flex-shrink: 0
 	margin-right: 5px
 
-.news__all-news
+.all-news
 	text-align: center
-	margin-bottom: 60px
+	margin-bottom: 45px
+	border-bottom: 4px solid #f0f0f0
+	padding-bottom: 12px
 
-.news__all-news-link
-	position: relative
-	transition: all 0.3s ease
+.all-news-link
 	font-weight: 500
-	color: #343434
 	text-transform: uppercase
 	font-size: 13px
-	&::before
-		position: relative
-		content: ''
-		display: block
-		border-bottom: 4px solid #f0f0f0
-		width: 100%
-		transition: all 0.3s ease
-		margin: auto
-		top: 35px
-		left: 0
-	&:hover
-		text-shadow: -1px 1px 2px rgba(0,0,0, 0.15)
-		&::before
-			border-color: #343434
 
 .articles
-	margin-bottom: 26px
-	.news-item__image-wrapper
-		margin-right: 25px
+	display: flex
+	flex-direction: column
+	margin-bottom: 40px
 
-	.news-item__title
-		margin-top: -5px
+.articles-item__left-part
+	margin-right: 25px
+	margin-bottom: 0
 
-	.news-item__text
-		margin-bottom: 14px
+.articles-item__right-part
+	display: flex
+	flex-direction: column
 
-.articles__grid
+.articles-item__title
+	margin-top: -5px
+
+.articles-item
 	display: flex
 	margin-bottom: 40px
 	&:last-child
@@ -166,6 +183,8 @@ a
 	margin: 115px auto 0
 
 .sidebar-grid-images
+	display: flex
+	flex-wrap: wrap
 	margin-right: -20px
 	margin-bottom: -20px
 	padding-bottom: 37px
@@ -221,3 +240,102 @@ a
 	.owl-next
 		transform: translateY(-50%) rotate(180deg)
 		margin-left: 550px
+
+.news__all-news-link_articles
+	margin-bottom: 40px
+
+.link-with-underline, .link-without-underline
+	text-decoration: none
+	position: relative
+	display: inline-block
+	color: #343434
+	&::after
+		position: relative
+		content: ''
+		display: block
+		border-bottom: 1px solid #343434
+		margin: auto
+		width: 100%
+		transition: all 0.3s ease
+	&:hover
+		&::after
+			width: 0
+
+.link-without-underline
+	&::after
+		width: 0
+	&:hover
+		&::after
+			width: 100%
+
+.link-white
+	color: #ffffff
+	&::after
+		border-color: #ffffff
+
+.link-gray
+	color: #999999
+	&::after
+		border-color: #999999
+
+.news-page, .articles-page, .article-page
+	padding-top: 15px
+	padding-bottom: 60px
+
+.breadcrumbs
+	list-style-type: none
+	display: flex
+	margin-bottom: 40px
+
+.breadcrumbs__item
+	position: relative
+	padding-right: 10px
+	margin-right: 20px
+	font-size: 13px
+	&::before
+		position: absolute
+		content: '/'
+		top: 0
+		left: auto
+		right: -10px
+	&:last-child
+		padding-right: 0
+		margin-right: 0
+		&::before
+			content: none
+			
+.pagination
+	display: flex
+	justify-content: center
+	
+.pagination__item, .pagination__item_dots
+	display: flex
+	justify-content: center
+	align-items: center
+	background-color: #f0f0f0
+	width: 29px
+	height: 29px
+	border-radius: 1px
+	font-size: 15px
+	color: #343434
+	margin-right: 5px
+	cursor: pointer
+	transition: all 0.3s ease
+	&:hover, &.active
+		background-color: #99cc33
+		color: #ffffff
+	&:last-child
+		margin-right: 0
+
+.pagination__item_dots
+	background: transparent
+
+.article__title
+	font-size: 25px
+	font-weight: 500
+
+.h3-title
+	font-size: 25px
+	font-weight: 500
+	color: #343434
+	margin-bottom: 15px

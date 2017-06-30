@@ -1,5 +1,8 @@
-@import "mixins/mixins"
-@import "mixins/retina_sprites"
+@import "app"
+
+.fri
+	vertical-align: middle
+	display: inline-block
 
 .fri-date
 	+sprite(date)
@@ -9,15 +12,25 @@
 
 .fri-facebook
 	+sprite(facebook)
+	&:hover
+		+sprite(facebook-gray)
 
 .fri-twitter
 	+sprite(twitter)
+	&:hover
+		+sprite(twitter-gray)
 
 .fri-google
 	+sprite(google)
+	&:hover
+		+sprite(google-gray)
 
 .fri-vk
 	+sprite(vk)
+	&:hover
+		+sprite(vk-gray)
 
 .fri-email
 	+sprite(email)
+	&:hover
+		+sprite(email-gray)
