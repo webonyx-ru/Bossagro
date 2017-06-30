@@ -1,0 +1,204 @@
+@media screen and (max-width: 950px)
+
+	.similar-articles
+		overflow-x: auto
+
+		.articles-item__bottom
+			flex-direction: column
+			align-items: flex-start
+
+			.button
+				order: 1
+
+			.statistic-and-date
+				margin-bottom: 15px
+
+@media screen and (max-width: 1200px)
+
+	.articles-item
+		flex-direction: column
+
+	.articles-item__left-part
+		margin-right: 0
+		margin-bottom: 25px
+
+@media screen and (max-width: 991px)
+
+	.logo-image
+		display: none
+
+	.small-logo
+		display: block
+	
+	.hamburger-button-wrapper
+		display: block
+
+	.header__top
+		height: 100%
+		background: #81c21e
+
+	.logo-image
+		width: 30%
+
+	.header__bottom
+		display: none
+
+	.sidebar
+		display: none
+
+	.page-content
+		max-width: none
+		margin-right: 0
+
+	.articles-item
+		flex-direction: row
+
+	.articles-item__left-part
+		margin-right: 25px
+		margin-bottom: 0
+
+	.footer__grid
+		flex-direction: column
+		align-items: center
+
+	.footer-menu
+		display: none
+
+	.footer-contacts
+		width: 100%
+		position: relative
+		text-align: center
+		margin-bottom: 15px
+		display: block
+		padding-bottom: 15px
+		&::after
+			position: absolute
+			content: ''
+			display: block
+			top: 100%
+			left: 50%
+			transform: translateX(-50%)
+			width: 90%
+			border-bottom: 1px solid rgba(#ffffff, 0.5)
+
+	.footer-social
+		width: 100%
+
+@media screen and (max-width: 767px)
+
+	.pagination
+		display: none
+
+	.pagination_mobile
+		display: flex
+
+	.breadcrumbs
+		display: none
+
+	.article-image-wrapper
+		float: none
+		margin-right: 0
+
+	.news
+		flex-direction: column
+		margin-right: 0
+		padding-bottom: 0
+		margin-bottom: 35px
+
+	.news-item
+		padding-right: 0
+		padding-bottom: 0
+		margin-bottom: 30px
+		width: 100%
+		&:last-child
+			margin-bottom: 0
+
+	.articles-item
+		flex-direction: column
+		&:last-child
+			margin-bottom: 0
+
+	.articles-item__left-part
+		margin-right: 0
+		margin-bottom: 20px
+
+	.news-item__text
+		display: none
+
+	.articles-slider
+		.owl-item
+			&:nth-child(odd)
+				.articles-slider__item
+					margin-left: auto
+					margin-right: auto
+
+				.articles-slider__image-wraper
+					margin-right: 20px
+					margin-left: 0
+			&:nth-child(even)
+
+				.articles-slider__item
+					margin-left: auto
+					margin-right: auto
+					float: none
+
+				.articles-slider__image-wraper
+					margin-left: 0
+					margin-right: 20px
+					order: 0
+
+				.articles-slider__text
+					text-align: left
+
+	.shared
+		flex-wrap: wrap
+		margin-bottom: 20px
+		margin-right: -10px
+
+	.shared__title
+		width: 100%
+		margin-right: 0
+		margin-bottom: 10px
+
+	.shared-icon-wrapper
+		padding-bottom: 20px
+		padding-right: 10px
+		margin-right: 0
+
+	.add-comment
+
+		.d-flex
+			flex-direction: column
+
+		.comments-input-wrapper
+			max-width: none
+			margin-right: 0
+			margin-bottom: 7px
+			&:last-child
+				margin-bottom: 0
+
+	.feedback
+
+		.d-flex
+			flex-direction: column
+
+		.feedback__input-wrapper
+			flex-basis: auto
+			flex-grow: 1
+			margin-bottom: 10px
+			&:last-child
+				margin-bottom: 0
+
+	.m-flex-column
+		flex-direction: column
+
+	.contact
+		flex-basis: 100%
+		margin-right: 0
+
+	.mob-mb36
+		margin-bottom: 36px
+
+	.h2-title
+		font-size: 25px
+		margin-bottom: 20px

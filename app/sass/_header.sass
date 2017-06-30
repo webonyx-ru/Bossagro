@@ -10,9 +10,12 @@
 	display: inline-block
 	line-height: 0
 
-.logo-image
+.logo-image, .small-logo
 	width: 100%
 	height: 100%
+
+.small-logo
+	display: none
 
 .header__bottom
 	height: 45px
@@ -36,3 +39,52 @@
 	font-weight: 500
 	text-transform: uppercase
 	font-size: 14px
+
+.header-grid
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+.hamburger-button-wrapper
+	display: none
+
+.button-hamburger
+	width: 50px
+	height: 40px
+	position: relative
+	cursor: pointer
+	display: inline-block
+	vertical-align: middle
+	outline: none
+	background-color: #e20816
+	transition: all 0.3s ease
+	&.active
+		height: 50px
+		.button-hamburger__line
+			opacity: 0
+			height: 4px
+			top: 50%
+			margin-top: -2px
+			&:first-child
+				transform: rotate(45deg)
+				opacity: 1
+			&:last-child
+				transform: rotate(-45deg)
+				opacity: 1
+
+.button-hamburger__line
+	position: absolute
+	height: 2px
+	background-color: #fff
+	right: 8px
+	left: 8px
+	top: 50%
+	margin-top: -1px
+	transition: all 0.3s ease
+	&:first-child
+		top: 8px
+		margin-top: 0
+	&:last-child
+		top: auto
+		margin-top: 0
+		bottom: 8px

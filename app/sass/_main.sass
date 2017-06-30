@@ -15,10 +15,15 @@ a
 	text-decoration: none
 	color: #343434
 
+input, textarea
+	border: none
+	outline: none
+
 .container
-	width: 1200px
+	max-width: 1200px
+	width: 100%
 	margin: 0 auto
-	padding: 0 30px
+	padding: 0 25px
 
 .link-image
 	display: inline-block
@@ -30,18 +35,21 @@ a
 .page-content
 	max-width: 805px
 	width: 100%
-	flex-shrink: 0
+	flex-shrink: 1
 	display: flex
 	flex-direction: column
 	margin-right: 45px
 
 .h2-title
-	margin-bottom: 30px
+	margin-bottom: 33px
 	font-size: 35px
 	color: #343434
 	font-weight: bold
 	text-align: center
-	letter-spacing: 2.5px
+	letter-spacing: 2px
+
+.h2-title_medium
+	font-weight: 500
 
 .news
 	display: flex
@@ -52,7 +60,7 @@ a
 
 .news-item
 	display: flex
-	flex-shrink: 0
+	flex-shrink: 1
 	flex-direction: column
 	padding-right: 50px
 	padding-bottom: 50px
@@ -60,7 +68,8 @@ a
 
 .news-item__image-wrapper, .articles-item__left-part
 	position: relative
-	width: 377px
+	max-width: 377px
+	width: 100%
 	height: 251px
 	flex-shrink: 0
 	overflow: hidden
@@ -88,7 +97,7 @@ a
 	line-height: 1.9
 	margin-bottom: 17px
 
-.news-item__bottom
+.news-item__bottom, .articles-item__bottom
 	display: flex
 	align-items: center
 	justify-content: space-between
@@ -192,6 +201,9 @@ a
 .sidebar-grid-image
 	padding-right: 20px
 	padding-bottom: 20px
+	transition: all 0.3s ease
+	&:hover
+		filter: contrast(125%)
 
 .sidebar-ban-wrapper
 	position: relative
@@ -209,15 +221,20 @@ a
 
 .partners-wrapper
 	position: relative
+	display: inline-block
 	height: 80px
 	width: 100%
 	overflow: hidden
+	&:hover
+		.partners__image
+			filter: contrast(125%)
 
 .partners__image
 	position: absolute
 	width: 100%
 	height: 80px
 	object-fit: contain
+	transition: all 0.3s ease
 
 .default-link
 	&:hover
@@ -278,7 +295,7 @@ a
 	&::after
 		border-color: #999999
 
-.news-page, .articles-page, .article-page
+.news-page, .articles-page, .article-page, .contacts-page
 	padding-top: 15px
 	padding-bottom: 60px
 
@@ -307,6 +324,9 @@ a
 .pagination
 	display: flex
 	justify-content: center
+
+.pagination_mobile
+	display: none
 	
 .pagination__item, .pagination__item_dots
 	display: flex
@@ -321,6 +341,7 @@ a
 	margin-right: 5px
 	cursor: pointer
 	transition: all 0.3s ease
+	flex-shrink: 0
 	&:hover, &.active
 		background-color: #99cc33
 		color: #ffffff
@@ -339,3 +360,278 @@ a
 	font-weight: 500
 	color: #343434
 	margin-bottom: 15px
+
+.article-image-wrapper
+	position: relative
+	overflow: hidden
+	max-width: 377px
+	width: 100%
+	height: 251px
+	margin-right: 25px
+	margin-bottom: 25px
+	float: left
+
+.article-image
+	position: absolute
+	height: 251px
+	width: 100%
+	object-fit: cover
+
+.article__text
+	font-size: 15px
+	color: #343434
+	line-height: 28px
+	margin-bottom: 20px
+
+.article__source
+	font-size: 15px
+	color: #999999
+	margin-bottom: 35px
+
+.shared
+	display: flex
+	align-items: center
+	margin-bottom: 40px
+
+.shared__title
+	font-size: 18px
+	color: #343434
+	font-weight: 500
+	margin-right: 15px
+
+.shared-icon-wrapper
+	margin-right: 10px
+	&:last-child
+		margin-right: 0
+
+.fri-facebook-colored, .fri-twitter-colored, .fri-google-colored, .fri-vk-colored, .fri-email-colored
+	cursor: pointer
+
+.articles-slider__item
+	display: flex
+	align-items: center
+	width: 300px
+	flex-shrink: 0
+	&:hover
+		.articles-slider__image
+			transform: scale(1.2)
+
+.articles-slider
+	border-bottom: 4px solid #CCCCCC
+	border-top: 4px solid #CCCCCC
+	padding: 35px 0
+	margin-bottom: 45px
+	.owl-item
+		&:nth-child(odd)
+			.articles-slider__item
+				margin-left: 37px
+
+			.articles-slider__image-wraper
+				margin-right: 20px
+				margin-left: 0
+		&:nth-child(even)
+
+			.articles-slider__item
+				margin-right: 37px
+				float: right
+
+			.articles-slider__image-wraper
+				margin-left: 20px
+				margin-right: 0
+				order: 2
+
+			.articles-slider__text
+				text-align: right
+
+	.owl-prev, .owl-next
+		position: absolute
+		background: url("../images/slider-arrow-left.png") no-repeat center
+		background-color: #fff
+		width: 22px
+		top: 50%
+		left: 50%
+		transform: translateY(-50%) rotate(0deg)
+		margin-left: -403px
+		height: 100%
+		&:hover
+			background: url("../images/slider-arrow-left-dark.png") no-repeat center
+			background-color: #fff
+
+	.owl-next
+		transform: translateY(-50%) rotate(180deg)
+		margin-left: 381px
+
+.articles-slider__image-wraper
+	position: relative
+	width: 87px
+	height: 87px
+	border: 3px solid #99cc33
+	border-radius: 50%
+	overflow: hidden
+	flex-shrink: 0
+	margin: 0
+
+.articles-slider__image
+	position: absolute
+	top: 0
+	left: 0
+	height: 87px
+	flex-shrink: 0
+	object-fit: cover
+	transition: all 0.3s ease
+
+.articles-slider__text
+	font-size: 16px
+	font-weight: 500
+	color: #343434
+
+.similar-articles
+	display: flex
+	margin-bottom: 50px
+
+.similar-articles__item
+	display: flex
+	flex-direction: column
+	max-width: 255px
+	width: 100%
+	margin-right: 20px
+	&:last-child
+		margin-right: 0
+
+.similar-articles__image-wrapper
+	position: relative
+	width: 255px
+	height: 170px
+	overflow: hidden
+	margin-bottom: 20px
+
+.similar-articles__image
+	position: absolute
+	width: 100%
+	height: 170px
+	object-fit: cover
+
+.similar-articles__text
+	font-size: 16px
+	font-weight: 500
+	color: #343434
+	margin-bottom: 20px
+	line-height: 25px
+
+.add-comment
+	padding: 30px 25px 33px
+	background-color: #f0f0f0
+	margin-bottom: 50px
+
+.add-comment__title
+	font-size: 23px
+	font-weight: 500
+	color: #343434
+	margin-bottom: 17px
+	text-align: center
+
+.comments-input-wrapper
+	max-width: 49%
+	width: 100%
+	margin-right: 2%
+	&:last-child
+		margin-right: 0
+
+.default-input
+	font-family: "Open Sans"
+	display: flex
+	align-items: center
+	padding: 0 10px
+	width: 100%
+	height: 37px
+	color: #343434
+	font-size: 14px
+	background-color: #ffffff
+
+.textarea-wrapper
+	margin-bottom: 17px
+
+.default-textarea
+	font-family: "Open Sans"
+	height: 100px
+	font-size: 14px
+	color: #343434
+	width: 100%
+	padding: 15px 10px 10px
+	resize: none
+
+.add-comment__button
+	width: 183px
+	margin: 0 auto
+
+.comment
+	margin-bottom: 45px
+	&:last-child
+		margin-bottom: 0
+
+.comment__author
+	font-size: 18px
+	font-weight: 500
+	color: #343434
+	margin-bottom: 17px
+
+.comment__text
+	font-family: "Open Sans"
+	font-size: 15px
+	color: #343434
+	line-height: 28px
+
+.contact
+	margin-right: 15px
+	display: flex
+	flex-direction: column
+	flex-grow: 1
+	flex-shrink: 0
+	flex-basis: 0
+	&:last-child
+		margin-right: 0
+
+.contact__title
+	font-size: 18px
+	font-weight: 500
+	color: #343434
+	margin-bottom: 10px
+
+.contact__text
+	font-family: "Open Sans"
+	font-size: 15px
+	color: #343434
+	
+.contact-text_name
+	color: #ffffff
+	background-color: #81c21e
+	padding: 0 5px
+
+.feedback
+	padding: 30px 25px 33px
+	background-color: #f0f0f0
+	margin-bottom: 50px
+
+.feedback__title
+	font-size: 23px
+	color: #343434
+	font-weight: 500
+	text-align: center
+	margin-bottom: 18px
+
+.feedback__subtitle
+	font-family: "Open Sans"
+	font-size: 16px
+	color: #343434
+	margin-bottom: 20px
+	text-align: center
+
+.feedback__input-wrapper
+	margin-right: 10px
+	width: 100%
+	flex-shrink: 0
+	flex-grow: 1
+	flex-basis: 0
+	&:last-child
+		margin-right: 0
+

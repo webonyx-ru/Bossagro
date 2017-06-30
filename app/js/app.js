@@ -250,17 +250,69 @@
         return plugin;
     };
 
-    YOURAPPNAME.prototype.partnersSlider = function () {
+    YOURAPPNAME.prototype.sliders = function () {
         $('.jq-parnters-slider').owlCarousel({
-            items: 7,
+            loop: true,
+            navText: '',
+            rewind: true,
+            autoplay: true,
+            smartSpeed: 800,
+            responsive : {
+                0: {
+                    items: 2,
+                    nav: false,
+                    mouseDrag: true,
+                    touchDrag: true,
+                    autowidth: true,
+                    autoplayTimeout: 1500
+                },
+                500: {
+                    items: 3
+                },
+                767: {
+                    items: 5
+                },
+                991 : {
+                    items: 7
+                },
+                1200 : {
+                    items: 7,
+                    nav: true,
+                    mouseDrag: false,
+                    touchDrag: false,
+                    autowidth: false,
+                    autoplayTimeout: 3000
+                }
+            }
+        });
+
+        $('.jq-articles-slider').owlCarousel({
+            items: 2,
             loop: true,
             autoWidth: false,
             nav: true,
             navText: '',
             rewind: true,
-            touchDrag: false,
-            mouseDrag: false,
-            smartSpeed: 800
+            smartSpeed: 400,
+            autoplay: true,
+            autoplayTimeout: 3000,
+            slideBy: 2,
+            responsive : {
+                0: {
+                    items: 1,
+                    nav: false,
+                    touchDrag: true,
+                    mouseDrag: true,
+                    slideBy: 1
+                },
+                767: {
+                    items: 2,
+                    nav: true,
+                    touchDrag: false,
+                    mouseDrag: false,
+                    slideBy: 2
+                }
+            }
         });
     };
 
@@ -276,7 +328,7 @@
         // DOM is loaded! Paste your app code here (Pure JS code).
         // Do not use jQuery here cause external libs do not loads here...
 
-        app.initSwitcher(); // data-switcher="{target: 'anything'}" , data-switcher-target="anything"
+        // app.initSwitcher(); // data-switcher="{target: 'anything'}" , data-switcher-target="anything"
     });
 
     app.appLoad('full', function (e) {
@@ -284,6 +336,7 @@
         // App was fully load! Paste external app source code here... 4example if your use jQuery and something else
         // Please do not use jQuery ready state function to avoid mass calling document event trigger!
 
-        app.partnersSlider();
+        app.popups();
+        app.sliders();
     });
 })();
