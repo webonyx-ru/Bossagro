@@ -257,22 +257,28 @@
             rewind: true,
             autoplay: true,
             smartSpeed: 800,
+            dots: false,
             responsive : {
                 0: {
                     items: 2,
                     nav: false,
+                    dots: true,
                     mouseDrag: true,
                     touchDrag: true,
-                    autowidth: true,
                     autoplayTimeout: 1500
                 },
                 500: {
+                    dots: true,
+                    nav: false,
                     items: 3
                 },
                 767: {
+                    nav: true,
+                    dots: false,
                     items: 5
                 },
                 991 : {
+                    nav: true,
                     items: 7
                 },
                 1200 : {
@@ -280,7 +286,6 @@
                     nav: true,
                     mouseDrag: false,
                     touchDrag: false,
-                    autowidth: false,
                     autoplayTimeout: 3000
                 }
             }
@@ -294,9 +299,10 @@
             navText: '',
             rewind: true,
             smartSpeed: 400,
-            autoplay: true,
+            // autoplay: true,
             autoplayTimeout: 3000,
             slideBy: 2,
+            margin: 20,
             responsive : {
                 0: {
                     items: 1,
@@ -314,6 +320,53 @@
                 }
             }
         });
+
+        $('.jq-similar-articles-slider').owlCarousel({
+            items: 3,
+            loop: true,
+            nav: false,
+            margin: 20,
+            responsive : {
+                0 : {
+                    items: 1
+                },
+                560 : {
+                    items: 2
+                },
+                820 : {
+                  items: 3
+                },
+                991 : {
+                    items: 2
+                },
+                1200 : {
+                    items: 3
+                }
+            }
+        })
+    };
+
+    YOURAPPNAME.prototype.headerImages = function () {
+        var sliderImages = $('.jq-header-right');
+
+        if ($( window ).width() > 991) {
+            sliderImages.each(function () {
+                var image = $(this).find('img.active'),
+                    images = $(this).find('img'),
+                    timeOut = parseInt($(this).attr('data-timeout')) * 350;
+                setTimeout(function () {
+                    setInterval(function () {
+                        images.removeClass('active');
+                        if (image.is(":last-child")) {
+                            image = images.eq(0).addClass('active')
+                        } else {
+                            image = image.next().addClass('active')
+                        }
+                    }, 2000);
+                }, timeOut);
+                console.log('hi')
+            })
+        }
     };
 
     var app = new YOURAPPNAME(document);
@@ -338,5 +391,6 @@
 
         app.popups();
         app.sliders();
+        app.headerImages()
     });
 })();
