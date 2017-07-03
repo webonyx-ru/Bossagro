@@ -94,3 +94,19 @@
 
 .mobile-submenu__item
 	margin-bottom: 10px
+
+.mobile-menu__item_dropdown
+	position: relative
+	cursor: pointer
+	&::before
+		position: absolute
+		content: ''
+		top: 50%
+		transform: translateY(-50%)
+		left: auto
+		right: -20px
+		width: 0
+		height: 0
+		border-style: solid
+		border-width: 7px 5px 0 5px
+		border-color: #343434 transparent transparent transparent
