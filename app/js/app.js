@@ -364,7 +364,6 @@
                         }
                     }, 2000);
                 }, timeOut);
-                console.log('hi')
             })
         }
     };

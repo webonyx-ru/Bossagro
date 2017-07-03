@@ -80,7 +80,6 @@
 }
 
 .header__bottom {
-  height: 45px;
   background-color: #81c21e;
   display: -ms-flexbox;
   display: flex;
@@ -99,16 +98,72 @@
 }
 
 .main-menu__item {
+  display: inline-block;
+  position: relative;
   margin-right: 30px;
 }
 .main-menu__item:last-child {
   margin-right: 0;
 }
+.main-menu__item:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  top: 100%;
+}
 
 .main-menu__item-link {
+  position: relative;
   font-weight: 500;
   text-transform: uppercase;
   font-size: 14px;
+  padding: 14px 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.submenu {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  display: block;
+  list-style-type: none;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #81c21e;
+  transition: all 0.3s ease;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.main-menu__subitem {
+  position: relative;
+  min-width: 170px;
+}
+
+.submenu__item-link {
+  padding: 10px;
+  color: #ffffff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.main-menu__item_dropdown {
+  position: relative;
+}
+.main-menu__item_dropdown::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: auto;
+  right: -15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 5px 0 5px;
+  border-color: #ffffff transparent transparent transparent;
 }
 
 .header-grid {
@@ -1209,11 +1264,11 @@ input, textarea {
   visibility: visible;
   opacity: 1;
 }
-.mobile-menu-modal.opened .mobile-menu {
+.mobile-menu-modal.opened .mobile-menu-wrapper {
   transform: translateX(0);
 }
 
-.mobile-menu {
+.mobile-menu-wrapper {
   height: 100%;
   max-width: 400px;
   overflow: auto;
@@ -1224,7 +1279,7 @@ input, textarea {
   transform: translateX(-100%);
 }
 
-.mobile-menu__list {
+.mobile-menu {
   list-style-type: none;
 }
 
@@ -1243,6 +1298,9 @@ input, textarea {
 }
 .mobile-menu__item:last-child {
   margin-bottom: 0;
+}
+.mobile-menu__item:hover .mobile-menu__submenu {
+  display: block;
 }
 
 .mobile-menu__close {
@@ -1282,6 +1340,24 @@ input, textarea {
 }
 .mobile-menu__close:hover::before {
   border-color: #000000;
+}
+
+.mobile-menu__submenu {
+  position: relative;
+  display: none;
+  list-style-type: none;
+  transition: all 0.3s ease;
+  top: 0;
+  left: 0;
+}
+
+.mobile-menu__submenu {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.mobile-submenu__item {
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 1200px) {
