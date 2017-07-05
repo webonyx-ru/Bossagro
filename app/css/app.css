@@ -888,15 +888,26 @@ input, textarea {
   -ms-flex-negative: 0;
   flex-shrink: 0;
 }
-.pagination__item:hover, .pagination__item.active, .pagination__item_dots:hover, .pagination__item_dots.active {
-  background-color: #99cc33;
-  color: #ffffff;
-}
-.pagination__item.inactive, .pagination__item_dots.inactive {
+.pagination__item.inactive a, .pagination__item_dots.inactive a {
   color: #d2d1d1;
 }
-.pagination__item.inactive:hover, .pagination__item_dots.inactive:hover {
+.pagination__item.active, .pagination__item_dots.active {
+  background-color: #99cc33;
+}
+.pagination__item.active a, .pagination__item_dots.active a {
+  color: #ffffff;
+}
+.pagination__item:hover, .pagination__item_dots:hover {
+  background-color: #99cc33;
+}
+.pagination__item:hover a, .pagination__item_dots:hover a {
+  color: #ffffff;
+}
+.pagination__item:hover.inactive, .pagination__item_dots:hover.inactive {
   background-color: #f0f0f0;
+}
+.pagination__item:hover.inactive a, .pagination__item_dots:hover.inactive a {
+  color: #d2d1d1;
 }
 .pagination__item:last-child, .pagination__item_dots:last-child {
   margin-right: 0;
