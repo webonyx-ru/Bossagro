@@ -344,6 +344,13 @@
                 }
             }
         })
+
+        $('.jq-top-news-slider').owlCarousel({
+            items: 4,
+            loop: true,
+            nav: false,
+            dots: true
+        })
     };
 
     YOURAPPNAME.prototype.headerImages = function () {

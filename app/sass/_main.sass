@@ -71,6 +71,42 @@ input, textarea
 	flex-basis: 50%
 	padding: 0 0 50px 50px
 
+.news-banner
+	margin-bottom: 30px
+
+.news-banners
+	display: flex
+	margin-bottom: 30px
+	justify-content: space-between
+
+.top-news
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: -15px
+	margin-left: -15px
+
+	.news-item__image-wrapper
+		height: 140px
+		width: 100%
+
+	.news-item__image
+		transform: scale(1.1)
+		height: 140px
+		transition: all 0.6s ease
+
+	.news-item
+		&:hover
+			.news-item__image
+				transform: scale(1)
+
+	.news-item__title
+		font-size: 15px
+
+	.news-wrapper
+		padding: 0 0 15px 15px
+		width: 25%
+		flex-basis: 25%
+
 .news-item__image-wrapper, .articles-item__left-part
 	position: relative
 	width: 377px
@@ -96,6 +132,8 @@ input, textarea
 	color: #343434
 	line-height: 1.5
 	margin-bottom: 8px
+	&:hover
+		text-decoration: underline
 
 .news-item__text
 	font-family: "Open Sans"
@@ -335,6 +373,11 @@ input, textarea
 	&::after
 		border-color: #999999
 
+.link-red
+	color: #e20816
+	&::after
+		border-color: #e20816
+
 .news-page, .articles-page, .article-page, .contacts-page, .main-page
 	padding-top: 15px
 	padding-bottom: 60px
@@ -550,11 +593,10 @@ input, textarea
 
 .similar-articles
 	display: flex
-	//margin-bottom: 30px
+	margin-bottom: 30px
 
 	.owl-stage
 		display: flex
-	.owl-stage-outer
 
 .similar-articles__item
 	display: flex
@@ -717,3 +759,5 @@ input, textarea
 	&:last-child
 		margin-right: 0
 
+.top-news
+	margin-bottom: 30px

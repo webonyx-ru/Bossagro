@@ -150,11 +150,11 @@
   font-size: 14px;
 }
 
-.main-menu__item_dropdown {
+.main-menu__item_dropdown, .main-menu__item_dropdown-red {
   position: relative;
   cursor: pointer;
 }
-.main-menu__item_dropdown::before {
+.main-menu__item_dropdown::before, .main-menu__item_dropdown-red::before {
   position: absolute;
   content: "";
   top: 50%;
@@ -166,6 +166,10 @@
   border-style: solid;
   border-width: 7px 5px 0 5px;
   border-color: #ffffff transparent transparent transparent;
+}
+
+.main-menu__item_dropdown-red::before {
+  border-color: #e20816 transparent transparent transparent;
 }
 
 .header-grid {
@@ -493,6 +497,48 @@ input, textarea {
   padding: 0 0 50px 50px;
 }
 
+.news-banner {
+  margin-bottom: 30px;
+}
+
+.news-banners {
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.top-news {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: -15px;
+  margin-left: -15px;
+}
+.top-news .news-item__image-wrapper {
+  height: 140px;
+  width: 100%;
+}
+.top-news .news-item__image {
+  transform: scale(1.1);
+  height: 140px;
+  transition: all 0.6s ease;
+}
+.top-news .news-item:hover .news-item__image {
+  transform: scale(1);
+}
+.top-news .news-item__title {
+  font-size: 15px;
+}
+.top-news .news-wrapper {
+  padding: 0 0 15px 15px;
+  width: 25%;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+}
+
 .news-item__image-wrapper, .articles-item__left-part {
   position: relative;
   width: 377px;
@@ -523,6 +569,9 @@ input, textarea {
   color: #343434;
   line-height: 1.5;
   margin-bottom: 8px;
+}
+.news-item__title:hover, .articles-item__title:hover {
+  text-decoration: underline;
 }
 
 .news-item__text {
@@ -826,6 +875,13 @@ input, textarea {
   border-color: #999999;
 }
 
+.link-red {
+  color: #e20816;
+}
+.link-red::after {
+  border-color: #e20816;
+}
+
 .news-page, .articles-page, .article-page, .contacts-page, .main-page {
   padding-top: 15px;
   padding-bottom: 60px;
@@ -1096,6 +1152,7 @@ input, textarea {
 .similar-articles {
   display: -ms-flexbox;
   display: flex;
+  margin-bottom: 30px;
 }
 .similar-articles .owl-stage {
   display: -ms-flexbox;
@@ -1306,6 +1363,10 @@ input, textarea {
 }
 .feedback__input-wrapper:last-child {
   margin-right: 0;
+}
+
+.top-news {
+  margin-bottom: 30px;
 }
 
 .mobile-menu-modal {
