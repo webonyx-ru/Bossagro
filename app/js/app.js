@@ -345,11 +345,12 @@
             }
         })
 
-        $('.jq-top-news-slider').owlCarousel({
-            items: 4,
+        $('.jq-redaction-slider').owlCarousel({
+            items: 1,
             loop: true,
             nav: false,
-            dots: true
+            dots: true,
+            autoplay: true
         })
     };
 
