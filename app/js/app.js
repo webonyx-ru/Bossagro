@@ -406,7 +406,7 @@
 
         app.popups();
         app.sliders();
-        app.headerImages()
-        app.socialButtons()
+        app.headerImages();
+        app.socialButtons();
     });
 })();
