@@ -11,20 +11,23 @@ body
 	margin: 0
 	padding: 0
 
+button, input, textarea
+	border: none
+	outline: none
+	&:hover, :active, :focus
+		border: none
+		outline: none
+
 a
 	text-decoration: none
 	color: #343434
 
-input, textarea
-	border: none
-	outline: none
-
 .site-wrapper
+	min-width: 320px
 	overflow: hidden
 
 .container
 	max-width: 1200px
-	min-width: 320px
 	width: 100%
 	margin: 0 auto
 	padding: 0 25px
@@ -161,7 +164,7 @@ input, textarea
 	align-items: center
 
 .button
-	display: flex
+	display: inline-flex
 	font-size: 12px
 	font-weight: 500
 	height: 40px
@@ -170,6 +173,19 @@ input, textarea
 	line-height: 1
 	text-transform: uppercase
 	cursor: pointer
+
+.button_blue
+	color: #ffffff
+	padding: 5px 10px
+	background: #3b92ff
+	border-radius: 1px
+	outline-color: rgba(#3b92ff, .5)
+	transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1)
+	&:hover
+		outline: 5px solid
+		outline-color: rgba(255, 255, 255, 0)
+		outline-offset: 15px
+		box-shadow: inset 0 0 1000px rgba(#000, 0.17)
 
 .button_green
 	color: #ffffff
@@ -377,6 +393,11 @@ input, textarea
 	color: #e20816
 	&::after
 		border-color: #e20816
+
+.link-green
+	color: #81c21e
+	&::after
+		border-color: #81c21e
 
 .news-page, .articles-page, .article-page, .contacts-page, .main-page
 	padding-top: 15px
@@ -670,13 +691,16 @@ input, textarea
 	resize: none
 
 .add-comment__button
-	width: 183px
+	width: 185px
 	margin: 0 auto
 	input
 		color: #ffffff
 		background: transparent
 	.ajax-loader
 		position: absolute
+
+.button_send
+	width: 185px
 
 .comment
 	margin-bottom: 45px
@@ -783,3 +807,111 @@ input, textarea
 		&.active
 			background-color: #81c21e
 			border: 2px solid #81c21e
+
+.ads-department-image-wrapper
+	position: relative
+	width: 100%
+	height: 500px
+	overflow: hidden
+	margin-bottom: 30px
+
+.ads-department-image
+	position: absolute
+	width: 100%
+	height: 500px
+	object-fit: cover
+
+.input
+	font-size: 15px
+	height: 40px
+	padding: 0 10px
+	border: 1px solid #b6b8b7
+	width: 100%
+	&:hover,
+	&:active,
+	&:focus
+		border: 1px solid #81c21e
+		
+.subscription
+	padding: 25px
+	background-color: #f0f0f0
+
+.input_subscr
+	width: 100%
+
+.subscr-label
+	margin-bottom: 20px
+	display: flex
+	flex-wrap: wrap
+
+.subscr-input-title
+	margin-bottom: 10px
+	width: 100%
+
+.subscr-checkboxes
+	display: flex
+	margin-bottom: 30px
+
+.subscr-checkbox-label
+	display: flex
+	align-items: center
+	margin-right: 30px
+	cursor: pointer
+	&:last-child
+		margin-right: 0
+
+.subscr-checkbox-title
+	margin-bottom: 0
+
+.checkbox
+	margin-right: 10px
+
+.archive
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: -30px
+	margin-left: -30px
+
+.archive-item
+	padding-bottom: 30px
+	padding-left: 30px
+	flex-basis: 33.3%
+	display: flex
+	flex-direction: column
+	&:hover
+		.link-with-underline
+			&::after
+				width: 0
+	p
+		margin-bottom: 0
+
+
+.archive-image-wrapper
+	position: relative
+	width: 100%
+	height: 300px
+	overflow: hidden
+	margin-bottom: 15px
+
+.archive-image
+	position: absolute
+	width: 100%
+	object-fit: cover
+
+.archive-item__title
+	font-size: 17px
+	margin-bottom: 10px
+
+.place-an-ads__img-wrapper
+	margin-bottom: 30px
+
+.place-an-ads__image
+	width: 100%
+
+.place-an-ads__link-wrap
+	margin-bottom: 15px
+	&:last-child
+		margin-bottom: 0
+
+.map
+	margin-bottom: 30px

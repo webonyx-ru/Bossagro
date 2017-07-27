@@ -1,0 +1,61 @@
+{% extends "layouts/app.twig" %}
+
+{% block pageTitle %}Рекламный отдел{% endblock %}
+
+{% block content %}
+
+    <div class="article-page">
+        <div class="container">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item"><a class="link-with-underline link-gray" href="/">Главная</a></li>
+                <li class="breadcrumbs__item"><a class="link-with-underline link-gray" href="/ads.html">Рекламный отдел</a></li>
+            </ul>
+            <div class="d-flex">
+                <div class="page-content">
+                    <div class="page-content-wrapper">
+                        <h3 class="h3-title">Рекламный отдел</h3>
+                        <div class="ads-department">
+                            <div class="ads-department-image-wrapper">
+                                <img class="ads-department-image" src="images/ads-department.jpg">
+                            </div>
+                            <p class="article__text">Рекламный отдел Казахстанского сельскохозяйственного журнала «Босс-Агро» является если не  основным звеном  редакции журнала, то уж точно не последним. Именно этот отдел отвечает за финансовую стабильность издания. Выставки, семинары, конференции, дни поля,  не проходят без участия специалистов рекламного отдела.  На протяжении многих лет этим отделом успешно руководит профессионал своего дела - Елена Новицкая.  Сегодня сотни компаний из России, Белоруссии, Германии, Италии, Чехии, Казахстана, Польши выбирают журнал «Босс-Агро» для  рекламирования своих товарах. Современные способы подачи рекламных материалов применяются в работе рекламного отдела журнала.</p>
+                            <p class="article__text">Телефон рекламного отдела: <a class="link-with-underline link-green" href="tel:87232225595">8 7232 22-55-95</a>, моб.: <a class="link-with-underline link-green" href="tel:87776336056">8 777 633 60 56</a></p>
+                            <p class="article__text">Е-mail: <a class="link-with-underline link-green" href="mailto:boss-agro@mail.ru">boss-agro@mail.ru</a></p>
+                            <p class="text-center"><span class="button button_green js-open-popup" data-open-popup="call-me-manager">Заказать звонок менеджера рекламного отдела</span></p>
+                            <div class="shared">
+                                <span class="shared__title">Поделиться:</span>
+                                <div class="pluso" data-background="transparent" data-options="big,round,line,horizontal,nocounter,theme=04" data-services="facebook,twitter,google,vkontakte,email"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sidebar">
+                    <div class="journal">
+                        <a class="journal__button button button_green" href="#">Читать журнал</a>
+                    </div>
+                    <div class="sidebar-grid-images">
+                        <div class="sidebar-grid-image">
+                            <a class="link-image" href="http://zlak.info/" target="_blank"><img src="images/sidebar-image-1.jpg"></a>
+                        </div>
+                        <div class="sidebar-grid-image">
+                            <a class="link-image" href="http://zlak.info/" target="_blank"><img src="images/sidebar-image-2.jpg"></a>
+                        </div>
+                        <div class="sidebar-grid-image">
+                            <a class="link-image" href="#" target="_blank"><img src="images/sidebar-image-3.jpg"></a>
+                        </div>
+                        <div class="sidebar-grid-image">
+                            <a class="link-image" href="http://agriastana.kz/ru/" target="_blank"><img src="images/sidebar-image-4.jpg"></a>
+                        </div>
+                    </div>
+                    <div class="sidebar-ban-wrapper">
+                        <img src="images/ban.jpg" alt="" class="sidebar__ban">
+                    </div>
+                    <div class="sidebar-gismeteo">
+                        <img src="images/gismeteo.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
