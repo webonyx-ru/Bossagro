@@ -89,6 +89,12 @@
 
 @media screen and (max-width: 767px)
 
+	.news-banner__image
+		display: none
+
+	.news-banners
+		display: none
+
 	.news-item__image, .articles-item__image
 		min-height: 251px
 		height: 100%
@@ -129,6 +135,15 @@
 
 	.news-item__text
 		display: none
+
+	.top-news
+
+		.news-item__text
+			display: block
+
+		.news-wrapper
+			width: 50%
+			flex-basis: 50%
 
 	.articles-slider
 		.owl-item
@@ -206,3 +221,10 @@
 	.h2-title
 		font-size: 25px
 		margin-bottom: 20px
+
+@media screen and (max-width: 450px)
+
+	.top-news
+		.news-wrapper
+			flex-basis: 100%
+			width: 100%
