@@ -343,7 +343,7 @@
                     items: 3
                 }
             }
-        })
+        });
 
         $('.jq-redaction-slider').owlCarousel({
             items: 1,
